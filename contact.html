@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact - Nightshade</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background: radial-gradient(circle at top left, #0f2027, #203a43, #2c5364);
+      color: #fff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      padding: 20px 0;
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      color: #00d2ff;
+      text-shadow: 0 0 10px #00d2ff, 0 0 20px #3a7bd5;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin: 40px 0 20px;
+      color: #00d2ff;
+      text-align: center;
+      text-shadow: 0 0 10px #00d2ff;
+    }
+
+    form {
+      max-width: 500px;
+      margin: auto;
+      background: rgba(0, 0, 0, 0.4);
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 210, 255, 0.3);
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 20px;
+      background: #1a1a1a;
+      border: none;
+      border-radius: 5px;
+      color: #fff;
+      font-size: 1rem;
+      outline: none;
+    }
+
+    input::placeholder, textarea::placeholder {
+      color: #aaa;
+    }
+
+    button {
+      padding: 12px 20px;
+      background-color: #00d2ff;
+      color: #000;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #3a7bd5;
+    }
+
+    footer {
+      margin-top: auto;
+      padding: 30px 0;
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      text-align: center;
+    }
+
+    .back-home {
+      color: #00d2ff;
+      font-size: 1rem;
+      text-decoration: none;
+      font-weight: bold;
+      letter-spacing: 1px;
+      transition: color 0.3s ease;
+    }
+
+    .back-home:hover {
+      color: #3a7bd5;
+      text-shadow: 0 0 10px #00d2ff;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>NIGHTSHADE - Contact</h1>
+  </header>
+
+  <h2>Get In Touch</h2>
+
+  <form>
+    <input type="text" placeholder="Your Name" required />
+    <input type="email" placeholder="Your Email" required />
+    <textarea rows="5" placeholder="Your Message" required></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+
+  <footer>
+    <a href="home.html" class="back-home">← Back to Home</a>
+  </footer>
+
+</body>
+</html>

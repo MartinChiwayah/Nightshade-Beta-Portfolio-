@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nightshade - Projects</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: radial-gradient(circle at top left, #0f2027, #203a43, #2c5364);
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    header {
+      width: 100%;
+      padding: 60px 0;
+      text-align: center;
+      background: linear-gradient(135deg, #2c5364, #203a43); /* Gradient background for header */
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    header h1 {
+      color: #00d2ff;
+      font-weight: 900;
+      font-size: 3rem;
+      letter-spacing: 2px;
+      text-shadow: 0 0 10px #00d2ff, 0 0 20px #3a7bd5;
+      margin-bottom: 10px;
+    }
+
+    header h2 {
+      color: #ccc;
+      font-size: 1.4rem;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px 30px;
+      max-width: 90vw;
+      margin: 20px auto 0;
+      padding: 10px 0;
+      text-align: center;
+    }
+
+    nav a {
+      font-size: 1rem;
+      text-decoration: underline;
+      color: #00d2ff;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      padding: 6px 4px;
+      transition: color 0.3s ease, text-decoration-color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #3a7bd5;
+      text-decoration-color: #3a7bd5;
+      text-decoration-thickness: 2px;
+    }
+
+    .hero {
+      height: 60vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .hero h2 {
+      font-size: 3rem;
+      color: #00d2ff;
+      text-shadow: 0 0 15px #00d2ff;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      color: #ccc;
+      max-width: 800px;
+      margin-bottom: 40px;
+    }
+
+    .projects-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+      gap: 40px;
+      max-width: 90vw;
+      margin: 40px auto;
+    }
+
+    .project-card {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+      position: relative;
+      transition: transform 0.3s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-10px);
+    }
+
+    .project-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    .project-card:hover img {
+      transform: scale(1.1);
+    }
+
+    .project-card .project-info {
+      padding: 20px;
+      text-align: center;
+    }
+
+    .project-card h3 {
+      color: #00d2ff;
+      font-size: 1.6rem;
+      margin-bottom: 15px;
+      font-weight: bold;
+    }
+
+    .project-card p {
+      color: #ccc;
+      margin-bottom: 15px;
+    }
+
+    .project-card a {
+      color: #3a7bd5;
+      text-decoration: underline;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    .project-card a:hover {
+      color: #00d2ff;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #3a7bd5;
+      color: white;
+      font-weight: 600;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    .button:hover {
+      background-color: #00d2ff;
+    }
+
+    footer {
+      background: linear-gradient(135deg, #203a43, #2c5364); /* Gradient background for footer */
+      padding: 20px 0;
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    footer a {
+      color: #00d2ff;
+      font-size: 1.2rem;
+      text-decoration: none;
+      font-weight: 600;
+      letter-spacing: 1px;
+      transition: color 0.3s ease;
+    }
+
+    footer a:hover {
+      color: #3a7bd5;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>MY PROJECTS</h1>
+    <h2>Behold, my masterpiece collection!</h2>
+  </header>
+
+  <section class="projects-container">
+    <div class="project-card">
+      <img src="https://via.placeholder.com/350x200" alt="Project 1">
+      <div class="project-info">
+        <h3>Project One</h3>
+        <p>A unique project that showcases my expertise in web development and innovative design.</p>
+        <a href="#" class="button">View Project</a>
+      </div>
+    </div>
+    <div class="project-card">
+      <img src="https://via.placeholder.com/350x200" alt="Project 2">
+      <div class="project-info">
+        <h3>Project Two</h3>
+        <p>This project highlights my skills in game development, bringing interactive experiences to life.</p>
+        <a href="#" class="button">View Project</a>
+      </div>
+    </div>
+    <div class="project-card">
+      <img src="https://via.placeholder.com/350x200" alt="Project 3">
+      <div class="project-info">
+        <h3>Project Three</h3>
+        <p>Exploring creativity in digital art, this project is an example of my artistic expression through code.</p>
+        <a href="#" class="button">View Project</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <a href="home.html">Back to Home</a>
+  </footer>
+
+</body>
+</html>

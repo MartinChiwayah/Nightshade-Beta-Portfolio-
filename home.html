@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nightshade - Home</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      opacity: 0;
+      transition: opacity 1.5s ease;
+      font-family: 'Segoe UI', sans-serif;
+      color: #fff;
+      overflow-x: hidden;
+      position: relative;
+      background: radial-gradient(circle at top left, #0f2027, #203a43, #2c5364);
+    }
+
+    body.loaded {
+      opacity: 1;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      width: 100%;
+      padding: 20px 0;
+      text-align: center;
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    header h1 {
+      color: #00d2ff;
+      font-weight: 900;
+      font-size: 2rem;
+      letter-spacing: 2px;
+      text-shadow: 0 0 10px #00d2ff, 0 0 20px #3a7bd5;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px 30px;
+      max-width: 90vw;
+      margin: 20px auto 0;
+      padding: 10px 0;
+      text-align: center;
+    }
+
+    nav a {
+      font-size: 1rem;
+      text-decoration: underline;
+      color: #00d2ff;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      padding: 6px 4px;
+      transition: color 0.3s ease, text-decoration-color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #3a7bd5;
+      text-decoration-color: #3a7bd5;
+      text-decoration-thickness: 2px;
+    }
+
+    .hero {
+      min-height: calc(100vh - 140px); /* Adjust based on header/nav height */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .hero h2 {
+      font-size: 3rem;
+      color: #00d2ff;
+      text-shadow: 0 0 15px #00d2ff;
+      opacity: 0;
+      transform: scale(0.85);
+      animation: zoomInSoft 1.4s ease-out forwards;
+      animation-delay: 0.5s;
+    }
+
+    .hero p {
+      margin-top: 20px;
+      font-size: 1.1rem;
+      color: #ccc;
+      opacity: 0;
+      transform: scale(0.85);
+      animation: zoomInSoft 1.4s ease-out forwards;
+      animation-delay: 1.2s;
+    }
+
+    body.loaded .hero h2,
+    body.loaded .hero p {
+      animation-play-state: running;
+    }
+
+    @keyframes zoomInSoft {
+      from {
+        opacity: 0;
+        transform: scale(0.85);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    #particles-js {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Particles.js Background -->
+  <div id="particles-js"></div>
+
+  <header>
+    <h1>NIGHTSHADE</h1>
+    <nav>
+      <a href="projects.html">Projects</a>
+      <a href="skills.html">Skills</a>
+      <a href="services.html">Services</a>
+      <a href="about.html">About</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>WELCOME TO MY WORLD</h2>
+    <p>Dive into code, design, and digital mastery.</p>
+  </section>
+
+  <!-- Include Particles.js -->
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script>
+    particlesJS("particles-js", {
+      particles: {
+        number: {
+          value: 100,
+          density: {
+            enable: true,
+            value_area: 800
+          }
+        },
+        color: {
+          value: "#00d2ff"
+        },
+        shape: {
+          type: "circle",
+          stroke: {
+            width: 0,
+            color: "#00d2ff"
+          }
+        },
+        opacity: {
+          value: 0.5,
+          random: true,
+          anim: {
+            enable: true,
+            speed: 1,
+            opacity_min: 0.1,
+            sync: false
+          }
+        },
+        size: {
+          value: 3,
+          random: true,
+          anim: {
+            enable: true,
+            speed: 3,
+            size_min: 0.1,
+            sync: false
+          }
+        },
+        line_linked: {
+          enable: true,
+          distance: 150,
+          color: "#00d2ff",
+          opacity: 0.4,
+          width: 1
+        },
+        move: {
+          enable: true,
+          speed: 3,
+          direction: "none",
+          random: true,
+          straight: false,
+          out_mode: "out",
+          bounce: false,
+          attract: {
+            enable: false
+          }
+        }
+      },
+      interactivity: {
+        detect_on: "canvas",
+        events: {
+          onhover: {
+            enable: true,
+            mode: "repulse"
+          },
+          onclick: {
+            enable: true,
+            mode: "push"
+          }
+        },
+        modes: {
+          repulse: {
+            distance: 100,
+            duration: 0.4
+          },
+          push: {
+            particles_nb: 4
+          }
+        }
+      },
+      retina_detect: true
+    });
+
+    window.addEventListener('load', () => {
+      document.body.classList.add('loaded');
+    });
+  </script>
+
+</body>
+</html>
